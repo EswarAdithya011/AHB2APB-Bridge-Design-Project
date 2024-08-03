@@ -1,4 +1,4 @@
-# AHB2APB Bridge Design and Implementation Project
+# AHB2APB Bridge Design and Implementation Using Verilog HDL
 ## Abstract
 This report details the design and implementation of an AHB to APB bridge. The bridge facilitates communication between the high-performance AHB (Advanced High-performance Bus) and the low-power APB (Advanced Peripheral Bus). The design includes an AHB slave interface and an APB FSM controller, as well as a testbench for verifying the functionality of the bridge. This project covers the synthesis of the bridge and highlights the technical and non-technical learnings derived from it.
 

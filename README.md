@@ -128,11 +128,11 @@ All registers used in the system are clocked from the rising edge of the system 
 The transfer state machine is used to control the application of APB transfers based on the AHB inputs. The state diagram in Figure 3-3 shows the operation of the state machine, which is controlled by its current state and the AHB slave interface. 
 
 ## 4. Signal Description
-#### Figure 4-1 AHB Signals
+#### Figure 4-1 AHB Signals:
 
 ![image](https://github.com/user-attachments/assets/835b91db-7cfd-4468-a3c0-3aeee43fb7a6)
 
-#### Figure 4-2 APB Signals
+#### Figure 4-2 APB Signals:
 
 ![image](https://github.com/user-attachments/assets/78ce40df-75e2-4e81-bed2-df90682facd0)
 
@@ -163,26 +163,38 @@ To design and simulate a synthesizable AHB to APB bridge interface using Verilog
 
 • Device: 5M2210ZF324I5
 
-### Simulation Results
+### 5.3 Simulation Results
 The below figures shows all four basic transfers as Follows:
-#### Figure 5-1 Single Read Transfer
+#### Figure 5-1 Single Read Transfer:
 <img width="939" alt="Single_Read" src="https://github.com/user-attachments/assets/7f835e20-ceca-4b18-9cb8-89786172ad03">
 
-#### Figure 5-2 Single Write Transfer
+#### Figure 5-2 Single Write Transfer:
 <img width="939" alt="Single_Write" src="https://github.com/user-attachments/assets/6dc55fb4-236b-43b0-8ff5-fb3629655c14">
 
-#### Figure 5-3 Burst Read Transfer
+#### Figure 5-3 Burst Read Transfer:
 <img width="960" alt="Burst_Read" src="https://github.com/user-attachments/assets/e67165cc-3b3a-4db9-b6f2-9d45b080357a">
 
-#### Figure 5-4 Burst Write Transfer
+#### Figure 5-4 Burst Write Transfer:
 <img width="960" alt="Burst_Write" src="https://github.com/user-attachments/assets/08e86ea2-5827-4eeb-8d32-8ad3cc346799">
+
+### 5.4 Synthesis Results
+#### Figure 6-1 Top Level RTL Model:
+<img width="933" alt="Bridge Top" src="https://github.com/user-attachments/assets/33c31761-5f2e-4880-8b0d-98e63c26fb0b">
+
+#### Figure 6-2 AHB Slave Model:
+<img width="960" alt="AHB Slave Interface" src="https://github.com/user-attachments/assets/954853cc-16e4-4600-a6e4-9899148583de">
+
+#### Figure 6-3 APB FSM Control Model:
+<img width="960" alt="APB Controller" src="https://github.com/user-attachments/assets/f154da89-da6c-4095-b7e1-28b9a2dc6892">
+
+#### Figure 6-4 State Machine Viewer:
+<img width="949" alt="State Machine Diagram (FSM)" src="https://github.com/user-attachments/assets/d016d83d-03db-476a-b670-2098d450e92c">
 
 ## 6. Conclusion
 The AHB to APB bridge is a crucial component in modern SoC designs, enabling efficient communication between high-speed and low-speed components. This report detailed its design, functionality, and performance through comprehensive simulation results.
 
 ## 7. Future Work
 Future work involves optimizing the bridge for lower power consumption and higher data throughput. Additional features such as enhanced error handling and support for newer AMBA protocols can also be explored.The multimaster and multislave AHB to APB bridge is one of the future scope. 
-
 
 
 

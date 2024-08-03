@@ -136,6 +136,55 @@ The transfer state machine is used to control the application of APB transfers b
 
 ![image](https://github.com/user-attachments/assets/78ce40df-75e2-4e81-bed2-df90682facd0)
 
+## 5. Implementation
+### 5.1 Objective 
+To design and simulate a synthesizable AHB to APB bridge interface using Verilog and run single read, single write burst read and burst write tests using AHB Master and APB Slave testbenches. The bridge unit converts system bus transfers into APB transfers and performs the following functions:
+
+• Latches the address and holds it valid throughout the transfer.
+
+• Decodes the address and generates a peripheral select, PSELx. Only one select signal can be active during a transfer.
+
+• Drives the data onto the APB for a write transfer.
+
+• Drives the APB data onto the system bus for a read transfer.
+
+• Generates a timing strobe, PENABLE, for the transfer.
+
+• Can implement single read and write operations successfully.
+
+### 5.2 Tools Used
+• HDL Used: Verilog
+
+• Simulator Tool Used: ModelSIM - Intel FPGA
+
+• Synthesis Tool Used: Quartus Prime
+
+• Family: MAX V
+
+• Device: 5M2210ZF324I5
+
+### Simulation Results
+The below figures shows all four basic transfers as Follows:
+#### Figure 5-1 Single Read Transfer
+<img width="939" alt="Single_Read" src="https://github.com/user-attachments/assets/7f835e20-ceca-4b18-9cb8-89786172ad03">
+
+#### Figure 5-2 Single Write Transfer
+<img width="939" alt="Single_Write" src="https://github.com/user-attachments/assets/6dc55fb4-236b-43b0-8ff5-fb3629655c14">
+
+#### Figure 5-3 Burst Read Transfer
+<img width="960" alt="Burst_Read" src="https://github.com/user-attachments/assets/e67165cc-3b3a-4db9-b6f2-9d45b080357a">
+
+#### Figure 5-4 Burst Write Transfer
+<img width="960" alt="Burst_Write" src="https://github.com/user-attachments/assets/08e86ea2-5827-4eeb-8d32-8ad3cc346799">
+
+## 6. Conclusion
+The AHB to APB bridge is a crucial component in modern SoC designs, enabling efficient communication between high-speed and low-speed components. This report detailed its design, functionality, and performance through comprehensive simulation results.
+
+## 7. Future Work
+Future work involves optimizing the bridge for lower power consumption and higher data throughput. Additional features such as enhanced error handling and support for newer AMBA protocols can also be explored.The multimaster and multislave AHB to APB bridge is one of the future scope. 
+
+
+
 
 
 
